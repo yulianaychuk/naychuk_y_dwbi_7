@@ -206,6 +206,25 @@ INSERT INTO [dbo].[Invoice]
            ,$5
            )
 GO
+INSERT INTO [dbo].[Invoice]
+           ([ID]
+           ,[ID_Operation_Type]
+           ,[Date]
+           ,[ID_Contragent]
+           ,[ID_Product]
+           ,[Amount]
+           ,[Price]
+           )
+     VALUES
+           (3
+           ,1
+           ,GETDATE()
+           ,1
+           ,1
+           ,5
+           ,$10
+ 	       )
+GO
 
 INSERT INTO [dbo].[Ware]
            ([ID]
