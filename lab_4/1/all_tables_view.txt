@@ -1,0 +1,16 @@
+USE [Y_N_module_3];
+GO
+
+SELECT  *
+FROM    
+(
+SELECT TOP 100 PERCENT sc.table_schema
+                     , sc.table_name
+                     , sc.column_name
+                     , sc.ordinal_position
+from information_schema.columns sc INNER JOIN
+sys.tables AS t ON sc.table_name = t.name INNER JOIN
+sys.columns AS c ON c.object_id = t.object_id AND c.name = sc.Column_Name
+order by table_schema, table_name, ordinal_position
+)t
+order by TABLE_SCHEMA
