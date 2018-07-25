@@ -1,9 +1,9 @@
 use Y_Naychuk_Library
 go
 
-alter table [Y_Naychuk_L].[Books] drop constraint [FK_Publisher_ID]
-alter table [Y_Naychuk_L].[BooksAuthors] drop constraint [FK_ISBN]
-alter table [Y_Naychuk_L].[BooksAuthors] drop constraint [FK_Author_Id]
+alter table [Y_Naychuk_L].[Books] drop constraint if exists [FK_Publisher_ID]
+alter table [Y_Naychuk_L].[BooksAuthors] drop constraint if exists [FK_ISBN]
+alter table [Y_Naychuk_L].[BooksAuthors] drop constraint if exists [FK_Author_Id]
 
 GO
 
@@ -16,7 +16,7 @@ Author_Id		int NOT NULL,
 Name			varchar(20) NOT NULL,
 URL				varchar(200) DEFAULT 'www.author_name.com',
 inserted		datetime NOT NULL DEFAULT GETDATE(),
-inserted_by		varchar(20) DEFAULT 'system_user',
+inserted_by		varchar(20) DEFAULT system_user,
 updated			datetime DEFAULT GETDATE(),
 updated_by		varchar(20) NULL,
 
@@ -42,7 +42,7 @@ Publisher_Id	int NOT NULL,
 [URL]	varchar(200) NOT NULL,
 Price	money DEFAULT 0, 	
 inserted	datetime NOT NULL DEFAULT GETDATE(),	
-inserted_by	varchar(20) DEFAULT 'system_user',	
+inserted_by	varchar(20) DEFAULT system_user,	
 updated	datetime DEFAULT GETDATE(),	
 updated_by	varchar(20) NULL,	
 
@@ -72,7 +72,7 @@ ISBN	varchar(20) NOT NULL,
 Author_Id	int NOT NULL,	
 Seq_No	int DEFAULT 1,	
 inserted	datetime NOT NULL DEFAULT GETDATE(),	
-inserted_by	varchar(20) DEFAULT 'system_user',	
+inserted_by	varchar(20) DEFAULT system_user,	
 updated	datetime DEFAULT GETDATE(),	
 updated_by	varchar(20) NULL,	
 
@@ -97,7 +97,7 @@ CREATE TABLE Y_Naychuk_L.Publishers (
 		Name	varchar(20) NOT NULL,	
 		URL	varchar(20) DEFAULT 'www.publisher_name.com',
 		inserted	datetime NOT NULL DEFAULT GETDATE(),	
-		inserted_by	 varchar(20) DEFAULT 'system_user',
+		inserted_by	 varchar(20) DEFAULT system_user,
 		updated	datetime DEFAULT GETDATE(),	
 		updated_by	varchar(20) NULL,	
 
