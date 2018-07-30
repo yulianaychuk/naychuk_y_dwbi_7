@@ -123,7 +123,7 @@ CREATE TABLE Y_Naychuk_L.Authors_log (
 		Author_Id_old	int NULL,
 		Name_old	varchar(20) NULL,	
 		URL_old	varchar(20) NULL,	
-		operation_type	varchar(20) NOT NULL,	
+		operation_type	varchar(20) NOT NULL CHECK (operation_type in ('I','D','U')),	
 		operation_datetime	datetime NOT NULL DEFAULT GETDATE(),	
 
 --- define default value (row level constraint)
