@@ -9,17 +9,17 @@ INSERT INTO [Y_Naychuk_L].[Books]
            )
      VALUES
            ('11111'
-           ,4
+           ,100
            ,'www.Tesla.com'
            ,10
            )
 		   ,('22222'
-           ,1
+           ,200
            ,'www.Edison.com'
            ,20
            )
 		   ,('33333'
-           ,3
+           ,300
            ,'www.UkrBook.com'
            ,5
            )

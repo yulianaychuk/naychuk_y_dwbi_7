@@ -93,7 +93,7 @@ drop table if exists Y_Naychuk_L.Publishers
 go
 
 CREATE TABLE Y_Naychuk_L.Publishers (
-		Publisher_Id	int NOT NULL,
+		Publisher_Id	int NOT NULL DEFAULT(NEXT VALUE FOR Y_Naychuk_L.Publishers_Id_seq),
 		Name	varchar(20) NOT NULL,	
 		URL	varchar(20) DEFAULT 'www.publisher_name.com',
 		inserted	datetime NOT NULL DEFAULT GETDATE(),	
