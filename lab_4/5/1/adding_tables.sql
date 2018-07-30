@@ -17,7 +17,7 @@ Name			varchar(20) NOT NULL,
 URL				varchar(200) DEFAULT 'www.author_name.com',
 inserted		datetime NOT NULL DEFAULT GETDATE(),
 inserted_by		varchar(20) DEFAULT system_user,
-updated			datetime DEFAULT GETDATE(),
+updated			datetime DEFAULT NULL,
 updated_by		varchar(20) NULL,
 
 --- define default value (row level constraint)
@@ -43,7 +43,7 @@ Publisher_Id	int NOT NULL,
 Price	money DEFAULT 0, 	
 inserted	datetime NOT NULL DEFAULT GETDATE(),	
 inserted_by	varchar(20) DEFAULT system_user,	
-updated	datetime DEFAULT GETDATE(),	
+updated	datetime DEFAULT NULL,	
 updated_by	varchar(20) NULL,	
 
 --- define default value (row level constraint)
@@ -73,7 +73,7 @@ Author_Id	int NOT NULL,
 Seq_No	int DEFAULT 1,	
 inserted	datetime NOT NULL DEFAULT GETDATE(),	
 inserted_by	varchar(20) DEFAULT system_user,	
-updated	datetime DEFAULT GETDATE(),	
+updated	datetime DEFAULT NULL,	
 updated_by	varchar(20) NULL,	
 
 --- define default value (row level constraint)
@@ -98,7 +98,7 @@ CREATE TABLE Y_Naychuk_L.Publishers (
 		URL	varchar(20) DEFAULT 'www.publisher_name.com',
 		inserted	datetime NOT NULL DEFAULT GETDATE(),	
 		inserted_by	 varchar(20) DEFAULT system_user,
-		updated	datetime DEFAULT GETDATE(),	
+		updated	datetime DEFAULT NULL,	
 		updated_by	varchar(20) NULL,	
 
 --- define default value (row level constraint)
