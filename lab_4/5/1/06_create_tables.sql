@@ -12,7 +12,7 @@ go
 SELECT name, type, schema_id FROM sys.all_objects where name = 'xml_schema_namespace'
 
 CREATE TABLE Y_Naychuk_L.Authors (
-Author_Id		int NOT NULL,
+Author_Id		int NOT NULL DEFAULT (NEXT VALUE FOR Y_Naychuk_L.Authors_Id_seq),
 Name			varchar(20) NOT NULL,
 URL				varchar(200) DEFAULT 'www.author_name.com',
 inserted		datetime NOT NULL DEFAULT GETDATE(),
@@ -93,7 +93,7 @@ drop table if exists Y_Naychuk_L.Publishers
 go
 
 CREATE TABLE Y_Naychuk_L.Publishers (
-		Publisher_Id	int NOT NULL DEFAULT(NEXT VALUE FOR Y_Naychuk_L.Publishers_Id_seq),
+		Publisher_Id	int NOT NULL DEFAULT (NEXT VALUE FOR Y_Naychuk_L.Publishers_Id_seq),
 		Name	varchar(20) NOT NULL,	
 		URL	varchar(20) DEFAULT 'www.publisher_name.com',
 		inserted	datetime NOT NULL DEFAULT GETDATE(),	

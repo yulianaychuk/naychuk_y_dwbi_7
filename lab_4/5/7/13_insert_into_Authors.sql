@@ -1,3 +1,6 @@
+SELECT * FROM Y_Naychuk_L.Authors
+SELECT * FROM Y_Naychuk_L.Authors_log
+
 INSERT INTO Y_Naychuk_L.Authors
 (
 Author_Id,
@@ -30,3 +33,5 @@ VALUES
 'Yuliya Naychuk',
 'https://bitbucket.org/YuliyaNaychuk/dwbi_labs/src/master/'
 )
+SELECT * FROM Y_Naychuk_L.Authors
+SELECT * FROM Y_Naychuk_L.Authors_log

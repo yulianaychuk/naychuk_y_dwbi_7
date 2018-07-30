@@ -1,6 +1,9 @@
 USE [Y_Naychuk_Library]
 GO
 
+SELECT * FROM Y_Naychuk_L.Books
+SELECT * FROM Y_Naychuk_L.Authors_log
+
 INSERT INTO [Y_Naychuk_L].[Books]
            ([ISBN]
            ,[Publisher_Id]
@@ -25,3 +28,5 @@ INSERT INTO [Y_Naychuk_L].[Books]
            )
 GO
 
+SELECT * FROM Y_Naychuk_L.Books
+SELECT * FROM Y_Naychuk_L.Authors_log
