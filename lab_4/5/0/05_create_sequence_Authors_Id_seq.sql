@@ -4,6 +4,7 @@ go
 drop sequence if exists Y_Naychuk_L.Authors_Id_seq
 
 CREATE SEQUENCE Y_Naychuk_L.Authors_Id_seq
+	AS int
 	START WITH 1
 	INCREMENT BY 1
 	NO CACHE
