@@ -1,7 +1,7 @@
 USE [Y_Naychuk_Library]
 GO
 
-DROP TRIGGER IF EXISTS trg_Publishers_update
+DROP TRIGGER IF EXISTS [Y_Naychuk_Library].[trg_Publishers_update]
 GO
 
 CREATE TRIGGER trg_Publishers_update

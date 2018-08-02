@@ -1,10 +1,10 @@
 USE [Y_Naychuk_Library]
 GO
 
-DROP TRIGGER IF EXISTS trg_Authors_update
+DROP TRIGGER IF EXISTS [Y_Naychuk_L].[trg_Authors_update]
 GO
 
-CREATE TRIGGER trg_Authors_update
+CREATE TRIGGER [Y_Naychuk_L].[trg_Authors_update]
 
 
 ON Y_Naychuk_L.Authors
@@ -46,7 +46,7 @@ GO
 
 
 
-DROP TRIGGER IF EXISTS trg_Authors_insert
+DROP TRIGGER IF EXISTS [Y_Naychuk_L].[trg_Authors_insert]
 GO
 
 CREATE TRIGGER trg_Authors_insert
@@ -84,7 +84,7 @@ GO
 
 
 
-DROP TRIGGER IF EXISTS trg_Authors_delete
+DROP TRIGGER IF EXISTS [Y_Naychuk_L].[trg_Authors_delete]
 GO
 
 CREATE TRIGGER trg_Authors_delete
